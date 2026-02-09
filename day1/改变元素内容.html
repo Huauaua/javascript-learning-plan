@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <title>菜鸟教程(runoob.com)</title>
+    </head>
+
+    <body>
+
+    <h1>我的第一段 JavaScript</h1>
+    <p id="demo">
+        JavaScript 能改变 HTML 元素的内容。
+    </p>
+    <script>
+        function myFunction() {
+            x = document.getElementById("demo");  // 找到元素
+            x.innerHTML = "Hello JavaScript!";    // 改变内容
+            x.draggable = true;
+            x.style.color = "red";
+            x.style.fontSize = "30px";
+        }
+    </script>
+    <button type="button" onclick="myFunction()">点击这里改变文字</button>
+
+    <hr>
+
+    <p>点击按钮改变图像：</p>
+
+    <script>
+        function myFunction2() {
+            x = document.getElementById("img");  // 找到元素
+            if(x.src.includes('/1')){
+                x.src = "../assets/image/2.png";
+            } else {
+                x.src = "../assets/image/1.jpg";
+            }
+        }
+    </script>
+
+    <img id="img" src="../assets/image/1.jpg" alt="JavaScript 图像" onclick="myFunction2()">
+
+    <button type="button" onclick="myFunction2()">
+        点击这里改变图像
+    </button>
+
+    </body>
+</html>
