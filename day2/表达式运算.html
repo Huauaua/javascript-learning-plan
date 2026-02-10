@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label>
+        <input type="text" id="a">
+    </label>
+    <label>
+        <input type="text" id="b">
+    </label>
+    <button onclick="calculate()">计算乘法结果</button>
+    <br>
+    结果：
+    <div id="result">
+        undefined
+    </div>
+
+    <script>
+        function calculate() {
+            let a = document.getElementById('a').value;
+            let b = document.getElementById('b').value;
+            document.getElementById('result').innerHTML = (a * b).toString();
+        }
+    </script>
+
+</body>
+</html>

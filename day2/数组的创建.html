@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1>数组的创建与显示</h1>
+
+    <div id="array">
+        undefined
+    </div>
+
+    <script>
+        let arr = [1, 2, 3, 4, 5];
+        let brr = [6, 7, 8, 9, 10];
+        document.getElementById('array').innerHTML = 'arr： ' + '<' + arr.join('><') + '>' + '<br>' + 'brr： ' + '<' + brr.join('><') + '>';
+    </script>
+
+    <h3>以下是获奖名单</h3>
+    <div id="winners">
+        undefined
+    </div>
+    <script>
+        let winners = ['张三', '李四', '王五', '赵六', '孙七'];
+        document.getElementById('winners').innerHTML = winners.join('<br>');
+    </script>
+
+
+</body>
+</html>

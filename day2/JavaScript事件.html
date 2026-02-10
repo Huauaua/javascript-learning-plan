@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>JavaScript事件</h1>
+    <p id="demo">Hello, World!</p>
+    <button onclick="alert('现在的时间是？')">Click Me</button><br>
+
+    <button onclick="document.getElementById('demo').innerHTML=Date()">现在的时间是?</button><br>
+
+    改变自身的文本<br>
+    <button onclick="this.innerHTML=Date()">现在的时间是?</button><br>
+
+    <div id="daterect" onclick="displayDate()" style="align-content:center;justify-items: center;color:white;width: 400px;height: 200px;border: 1px solid black;background: darksalmon">
+        <p>点击我</p>
+        <p>现在的时间是?</p>
+    </div>
+    <script>
+        function displayDate() {
+            document.getElementById("daterect").innerHTML = Date();
+        }
+    </script>
+
+    <hr>
+
+    <button onclick="drop()">我坠落</button><br>
+    <script>
+        function drop() {
+            let box = document.getElementById("daterect");
+            let position = 0;
+            let velocity = 0;
+            const gravity = 0.1;
+            const targetPosition = 1000;
+
+            function animate() {
+                // 应用重力加速度
+                velocity += gravity;
+                position += velocity;
+
+                // 使用 transform 实现高性能动画
+                box.style.transform = `translateY(${position}px)`;
+
+                // 继续动画直到到达目标位置
+                if (position < targetPosition) {
+                    requestAnimationFrame(animate);
+                }
+
+                if(position > targetPosition) {
+                    box.remove();
+                }
+            }
+
+            animate();
+        }
+    </script>
+
+
+</body>
+</html>
