@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>JavaScript对象</h2>
+    <div id="obj">JavaScript对象</div>
+    <h2>json</h2>
+    <div id="json">json</div>
+    <script>
+        let obj = {
+            "name": "张三",
+            "age": 18,
+            "sex": "男"
+        }
+        let json = JSON.stringify(obj);
+        document.getElementById("obj").innerHTML = json;
+        document.getElementById("json").innerHTML = JSON.stringify(json);
+    </script>
+
+</body>
+</html>
