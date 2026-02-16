@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计数器</title>
+</head>
+<body>
+    <h2>闭包计数器</h2>
+    <p>这是一个计数器示例</p>
+    <button id="counter" onclick="counter_add()">计数</button>
+    <p id="count">0</p>
+    <script>
+        let add = (function (){
+            let count = 0;
+            return function (){
+                return ++count;
+            }
+        })();
+        const counter_add = function (){
+            document.getElementById("count").innerHTML = add();
+        }
+    </script>
+
+    <h2>使用类的计数器</h2>
+    <p>这是一个使用类的计数器示例</p>
+    <button id="counter2" onclick="counter2_add()">计数</button>
+    <p id="count2">0</p>
+    <script>
+        class Counter {
+            constructor() {
+                this.count = 0;
+            }
+            add() {
+                return ++this.count;
+            }
+        }
+        let counter2 = new Counter();
+        const counter2_add = function (){
+            document.getElementById("count2").innerHTML = counter2.add();
+        }
+    </script>
+
+</body>
+</html>
