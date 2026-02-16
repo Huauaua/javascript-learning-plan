@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>函数</h2>
+<p>函数是JavaScript中用于执行特定任务的代码块。</p>
+<p>
+    function add(a, b) {<br>
+    &block;&block; a + b;<br>
+    }<br>
+</p>
+
+<label>请输入两个数字：</label><br>
+<input type="number" id="num1"><br>
+<input type="number" id="num2"><br>
+<button onclick="add()">求和</button>
+<br>
+<button onclick="x2()">求差</button>
+<br>
+<button onclick="prod()">求积</button>
+<br>
+<p>结果：<span id="result"></span></p>
+<script>
+    let num1 = document.getElementById("num1");
+    let num2 = document.getElementById("num2");
+    let x2 = function () {
+        var num1 = document.getElementById("num1").value;
+        var num2 = document.getElementById("num2").value;
+        var result = parseInt(num1) - parseInt(num2);
+        document.getElementById("result").innerHTML = result;
+    }
+
+    function add() {
+        var num1 = document.getElementById("num1").value;
+        var num2 = document.getElementById("num2").value;
+        var result = parseInt(num1) + parseInt(num2);
+        document.getElementById("result").innerHTML = result;
+    }
+
+    const x3 = (a, b) => {
+        return a * b;
+    }
+    function prod(){
+        document.getElementById("result").innerHTML = x3(num1.value, num2.value);
+    }
+</script>
+</body>
+</html>
