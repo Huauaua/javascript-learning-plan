@@ -1,0 +1,26 @@
+:root {
+    --font-primary: 'Roboto', sans-serif;
+    --pink-linear: linear-gradient(332deg, #ff575f, #fb65e8);
+    --blue-linear: linear-gradient(332deg, #0099ff, #00ccff);
+    --green-linear: linear-gradient(332deg, #00ff99, #00ffcc);
+}
+
+.rotate-rect {
+    width: 200px;
+    height: 200px;
+    background: var(--pink-linear);
+    border: 3px solid #333333;
+    border-radius: 50px;
+    box-shadow: 10px 10px 17px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    transition: all 1s ease;
+    text-align: center;
+    line-height: 200px;
+    font-size: 20px;
+    color: #333333;
+}
+
+.rotate-rect:hover {
+    transform: scale(1.01) rotate(2160deg);
+    opacity: 0.8;
+}

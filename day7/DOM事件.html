@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM事件</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+    <h2>DOM事件</h2>
+    <p>将鼠标移动到方框上</p>
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)" onmousedown="mdown(this)" onmouseup="mup(this)" style="background-color:#D94A38;width:120px;height:20px;padding:40px;">Mouse Over Me</div>
+    <script>
+        function mOver(obj){
+            obj.innerHTML="Thank You"
+            obj.style.backgroundColor='green'
+        }
+        function mOut(obj){
+            obj.innerHTML="Mouse Over Me"
+            obj.style.backgroundColor='#D94A38'
+        }
+        function mdown(obj){
+            obj.innerHTML="Release Me"
+            obj.style.backgroundColor='yellow'
+        }
+        function mup(obj){
+            obj.innerHTML="Mouse Over Me"
+            obj.style.backgroundColor='#D94A38'
+        }
+    </script>
+    <div class="rotate-menu" style="margin-left: 50px">
+        <h3>旋转菜单</h3>
+        <div style="align-content: center;display: flex;column-gap: 50px;">
+            <div class="rotate-rect" style="background: var(--pink-linear)">完美的黄金旋转</div>
+            <div class="rotate-rect" style="background: var(--blue-linear)">完美的黄金旋转</div>
+            <div class="rotate-rect" style="background: var(--green-linear)">完美的黄金旋转</div>
+        </div>
+    </div>
+    <p>旋转方框</p>
+    <div class="rotate-rect">完美的黄金旋转</div>
+</body>
+</html>
